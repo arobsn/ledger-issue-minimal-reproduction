@@ -1,4 +1,4 @@
-# Minimal reproduction of ledger app tx crash
+# Minimal reproduction of ledger app crash
 
 In this example I'm emulating Stax device on `speculos` running in a Docker container.
 
