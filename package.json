@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fleet-sdk/core": "^0.7.0",
+    "@fleet-sdk/crypto": "^0.6.4",
+    "@fleet-sdk/mock-chain": "^0.7.0",
+    "@ledgerhq/hw-transport-node-speculos-http": "^6.29.4",
+    "ergo-lib-wasm-nodejs": "^0.28.0",
+    "ledger-ergo-js": "^0.1.18"
+  }
+}
