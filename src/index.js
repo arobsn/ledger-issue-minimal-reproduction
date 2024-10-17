@@ -13,7 +13,6 @@ const { mockUTxO } = require("@fleet-sdk/mock-chain");
 const { mapTx } = require("./tx-mapper");
 
 const KEY_PATH = "44'/429'/0'/0/0";
-// const XPK_PATH = "44'/429'/0'";
 
 (async () => {
 	const transport = await SpeculosHttpTransport.open({
@@ -21,17 +20,11 @@ const KEY_PATH = "44'/429'/0'/0/0";
 	});
 	const app = new ErgoLedgerApp(transport).useAuthToken(false);
 
-	// app info
-	await run("getAppName", () => app.getAppName());
-	await run("getAppVersion", () => app.getAppVersion());
-
 	// key derivation
 	const address = await run("deriveAddress", async () => {
 		const { addressHex } = await app.deriveAddress(KEY_PATH);
 		return base58.encode(hex.decode(addressHex));
 	});
-	// await log("showAddress", () => app.showAddress(KEY_PATH));
-	// await log("getExtendedPublicKey", () => app.getExtendedPublicKey(XPK_PATH));
 
 	// sign
 	const unsignedTx = buildTransaction(address);
