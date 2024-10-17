@@ -11,5 +11,6 @@ pnpm run
 
 # What this does?
 
-1. Derive an address from the ledger device
-2. Tries to sign it with mocked inputs for the address obtained from the step 1
+1. Connect to `speculos` emulator through `@ledgerhq/hw-transport-node-speculos-http` transporter
+2. Derive an address from the ledger device
+3. Tries to sign it with mocked inputs for the address obtained from the step 2
